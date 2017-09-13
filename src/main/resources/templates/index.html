@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Getting Started: Handling Form Submission</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <a href="user/create">create</a>
+        <th:forEach th:each="account : ${accounts}">
+            <p th:text="'Name: ' + ${account.name}" ></p>
+            <a href="user/update/${account.id}">update</a> <a href="user/delete/${account.id}">delete</a>
+        </th:forEach>
+    </body>
+</html>
